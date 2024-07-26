@@ -40,7 +40,7 @@ public class RentalEntity {
     private Double fine;
     @Column(name = "total_cost")
     private Double totalCost;
-    @OneToMany(mappedBy = "rentalEntity")
+    @OneToMany(mappedBy = "rentalEntity",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RentalDetailEntity> rentalDetailEntityList;
 
 }

@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Rental {
     private Long rentalId;
+    private Long customerId;
     private LocalDate rentalDate;
     private LocalDate expectedReturnDate;
     private LocalDate dueDate;

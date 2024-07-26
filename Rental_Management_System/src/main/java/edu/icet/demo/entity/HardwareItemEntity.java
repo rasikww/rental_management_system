@@ -32,6 +32,6 @@ public class HardwareItemEntity {
     @Column(name = "fine_per_day")
     private Double finePerDay;
     private boolean availability;
-    @OneToMany(mappedBy = "hardwareItemEntity")
+    @OneToMany(mappedBy = "hardwareItemEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RentalDetailEntity> rentalDetailEntityList;
 }
