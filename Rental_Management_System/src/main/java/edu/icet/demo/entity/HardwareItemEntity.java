@@ -24,7 +24,7 @@ public class HardwareItemEntity {
             name = "item_id_generator",
             allocationSize = 1
     )
-    private long itemId;
+    private Long itemId;
     @Column(name = "item_name")
     private String itemName;
     @Column(name = "rental_per_day")
@@ -32,6 +32,6 @@ public class HardwareItemEntity {
     @Column(name = "fine_per_day")
     private Double finePerDay;
     private boolean availability;
-    @OneToMany(mappedBy = "itemId")
-    private List<HardwareItemEntity> hardwareItemEntityList;
+    @OneToMany(mappedBy = "hardwareItemEntity")
+    private List<RentalDetailEntity> rentalDetailEntityList;
 }

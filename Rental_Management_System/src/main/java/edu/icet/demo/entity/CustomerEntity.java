@@ -25,11 +25,11 @@ public class CustomerEntity {
             name = "customer_id_generator",
             allocationSize = 1
     )
-    private long customerId;
+    private Long customerId;
     @Column(name = "customer_name")
     private String customerName;
     private String contact;
     private String city;
-    @OneToMany(mappedBy = "customerId")
+    @OneToMany(mappedBy = "customerEntity")
     private List<RentalEntity> rentalEntityList;
 }

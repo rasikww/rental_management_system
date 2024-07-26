@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RentalDetail {
-    private long rentalDetailId;
-    private long rentalId;
-    private long hardwareItemId;
+    private Long rentalDetailId;
+    private Long rentalId;
+    private Long hardwareItemId;
     private Double totalItemCost;
     private Integer qty;
 }

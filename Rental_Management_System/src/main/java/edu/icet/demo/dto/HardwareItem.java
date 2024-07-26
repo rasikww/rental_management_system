@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HardwareItem {
-    private long itemId;
+    private Long itemId;
     private String itemName;
     private Double rentalPerDay;
     private Double finePerDay;

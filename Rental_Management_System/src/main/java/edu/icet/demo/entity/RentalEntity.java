@@ -25,10 +25,10 @@ public class RentalEntity {
             name = "rental_id_generator",
             allocationSize = 1
     )
-    private long rentalId;
+    private Long rentalId;
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private long customerId;
+    private CustomerEntity customerEntity;
     @Column(name = "rental_date")
     private LocalDate rentalDate;
     @Column(name = "expected_return_date")
@@ -40,7 +40,7 @@ public class RentalEntity {
     private Double fine;
     @Column(name = "total_cost")
     private Double totalCost;
-    @OneToMany(mappedBy = "rentalId")
+    @OneToMany(mappedBy = "rentalEntity")
     private List<RentalDetailEntity> rentalDetailEntityList;
 
 }

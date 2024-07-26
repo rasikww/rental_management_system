@@ -22,13 +22,13 @@ public class RentalDetailEntity {
             name = "rental_detail_id_generator",
             allocationSize = 1
     )
-    private long rentalDetailId;
+    private Long rentalDetailId;
     @ManyToOne
     @JoinColumn(name = "rental_id")
-    private long rentalId;
+    private RentalEntity rentalEntity;
     @ManyToOne
     @JoinColumn(name = "item_id")
-    private long itemId;
+    private HardwareItemEntity hardwareItemEntity;
     @Column(name = "total_item_cost")
     private Double totalItemCost;
     private Integer qty;

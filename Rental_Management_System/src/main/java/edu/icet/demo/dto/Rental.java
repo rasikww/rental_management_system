@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Rental {
-    private long rentalId;
+    private Long rentalId;
     private LocalDate rentalDate;
     private LocalDate expectedReturnDate;
     private LocalDate dueDate;
