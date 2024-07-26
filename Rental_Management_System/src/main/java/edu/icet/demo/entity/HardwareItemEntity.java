@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SoftDelete;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -30,4 +32,6 @@ public class HardwareItemEntity {
     @Column(name = "fine_per_day")
     private Double finePerDay;
     private boolean availability;
+    @OneToMany(mappedBy = "itemId")
+    private List<HardwareItemEntity> hardwareItemEntityList;
 }

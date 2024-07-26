@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SoftDelete;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,4 +30,6 @@ public class CustomerEntity {
     private String customerName;
     private String contact;
     private String city;
+    @OneToMany(mappedBy = "customerId")
+    private List<RentalEntity> rentalEntityList;
 }

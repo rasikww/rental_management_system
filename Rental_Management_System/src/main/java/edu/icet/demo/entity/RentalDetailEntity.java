@@ -23,9 +23,11 @@ public class RentalDetailEntity {
             allocationSize = 1
     )
     private long rentalDetailId;
-    @Column(name = "rental_id")
+    @ManyToOne
+    @JoinColumn(name = "rental_id")
     private long rentalId;
-    @Column(name = "item_id")
+    @ManyToOne
+    @JoinColumn(name = "item_id")
     private long itemId;
     @Column(name = "total_item_cost")
     private Double totalItemCost;

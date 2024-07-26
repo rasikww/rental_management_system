@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SoftDelete;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -24,8 +25,9 @@ public class RentalEntity {
             name = "rental_id_generator",
             allocationSize = 1
     )
-    private long rentId;
-    @Column(name = "customer_id")
+    private long rentalId;
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
     private long customerId;
     @Column(name = "rental_date")
     private LocalDate rentalDate;
@@ -38,5 +40,7 @@ public class RentalEntity {
     private Double fine;
     @Column(name = "total_cost")
     private Double totalCost;
+    @OneToMany(mappedBy = "rentalId")
+    private List<RentalDetailEntity> rentalDetailEntityList;
 
 }
